@@ -24,8 +24,9 @@ class Dustbin{
         translate(pos.x,pos.y); //translate will shift the origin to pos.x,pos.y
       //  rotate (angle); // rotate the body respect to the origin.
         rectMode(CENTER);
+        noStroke();
         strokeWeight(3);
-        fill("white");
+        fill("blue");
         rect(0,0,this.width,this.height);//Origin is already shifted, so draw rect at 0,0
         pop (); //revert back to the old setting
     }
