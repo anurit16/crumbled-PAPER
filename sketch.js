@@ -10,7 +10,7 @@ var box3,box4,box5;
 
 
 function setup() {
-	createCanvas(1800, 600);
+	createCanvas(1000, 400);
 
 	myEngine=Engine.create();
 	myWorld = myEngine.world;
@@ -21,18 +21,18 @@ function setup() {
 
 	//Create the Bodies Here.
 
-	ground = new Ground(900,550,1800,20);
-	dustbin1 = new Dustbin(1600,530,300,20);
-	dustbin2 = new Dustbin(1450,430,20,200);
-	dustbin3 = new Dustbin(1750,430,20,200);
-   	paper = new Paper(100,300,20);
+	ground = new Ground(500,350,1000,20);
+	dustbin1 = new Dustbin(750,330,200,20);
+	dustbin2 = new Dustbin(650,290,20,100);
+	dustbin3 = new Dustbin(850,290,20,100);
+	paper = new Paper(110,300,30);
 	
 }
 
 
 function draw() {
 
-  background(0);
+  background(200);
   Engine.update(myEngine);
   
   ground.display(); 
@@ -45,7 +45,8 @@ function draw() {
 }
  function keyPressed(){
 	 if(keyCode===UP_ARROW){
-		 Matter.Body.applyForce(paperObject.body,paperObject.body.position,{x:85,y:-85});
+		
+		 Matter.Body.applyForce(paper.body,paper.body.position,{x:300,y:-110});
 	 }
  }
 
